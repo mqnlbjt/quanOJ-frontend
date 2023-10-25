@@ -1,6 +1,6 @@
 <template>
   <div id="layout-demo">
-    <a-layout style="height: 400px">
+    <a-layout style="height: 100vh">
       <a-layout-header class="header">
         <GlobalHeader />
       </a-layout-header>
@@ -37,8 +37,8 @@ export default {
 
 #layout-demo .footer {
   background-color: #42b983;
-  padding: 16px;
-  position: absolute;
+  padding: 10px;
+  position: sticky;
   bottom: 0;
   left: 0;
   right: 0;
