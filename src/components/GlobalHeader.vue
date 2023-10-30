@@ -37,6 +37,7 @@ import { useRoute, useRouter } from "vue-router";
 import { computed, ref } from "vue";
 import { useStore } from "vuex";
 import checkAccess from "@/access/checkAccess";
+import AccessEnum from "@/access/accessEnum";
 
 const router = useRouter();
 const route = useRoute();
@@ -56,6 +57,12 @@ const visibleRoutes = computed(() => {
     return true;
   });
 });
+setTimeout(() => {
+  store.dispatch("user/getLoginUser", {
+    userName: "管理员",
+    userRole: AccessEnum.ADMIN,
+  });
+}, 3000);
 
 router.afterEach((to, from, failure) => {
   selectedKeys.value = [to.path];

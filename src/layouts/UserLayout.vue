@@ -1,8 +1,11 @@
 <template>
-  <div id="layout-demo">
+  <div id="userLayout">
     <a-layout style="height: 100vh">
       <a-layout-header class="header">
-        <GlobalHeader />
+        <a-space>
+          <img src="../assets/1.png" class="logo" />
+          <div>QUAN OJ</div>
+        </a-space>
       </a-layout-header>
       <a-layout-content class="content">
         <router-view />
@@ -13,29 +16,32 @@
 </template>
 
 <script>
-import GlobalHeader from "@/components/GlobalHeader.vue";
-
 export default {
-  name: "BasicLayout",
-  components: { GlobalHeader },
+  name: "UserLayout",
 };
 </script>
 
 <style scoped>
-#layout-demo {
+#userLayout {
+  text-align: center;
 }
 
-#layout-demo .content {
+#userLayout .logo {
+  width: 64px;
+  height: 64px;
+}
+
+#userLayout .content {
   background: linear-gradient(to right, #eee, #fff);
   margin-bottom: 16px;
 }
 
-#layout-demo .header {
+#userLayout .header {
   margin-bottom: 16px;
   box-shadow: #eee 1px 2px 5px;
 }
 
-#layout-demo .footer {
+#userLayout .footer {
   background-color: #42b983;
   padding: 10px;
   position: absolute;
