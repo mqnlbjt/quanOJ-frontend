@@ -37,8 +37,8 @@ export default {
 
 #layout-demo .footer {
   background-color: #42b983;
-  padding: 10px;
-  position: absolute;
+  padding: 16px;
+  position: sticky;
   bottom: 0;
   left: 0;
   right: 0;
